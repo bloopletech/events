@@ -1,0 +1,8 @@
+= form_for @event, :remote => true do |f|
+  = f.hidden_field :started_at
+  = f.hidden_field :finished_at
+  = f.submit 'Start event', :type => 'button', :id => 'event_start'
+  #event_started_fields
+    = f.text_field :tag_list
+    = f.submit 'Finish Event'
+  

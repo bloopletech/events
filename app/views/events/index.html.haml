@@ -1,0 +1,17 @@
+= content_for :head do
+  = javascript_include_tag 'events'
+
+%h1 Add event
+
+#new_event_wrapper
+  = render :partial => 'new'
+  .clear
+
+%h1 Latest events
+
+#events_list_wrapper= render :partial => 'events'
+
+%h1 Export events
+
+%p
+  = link_to("Export to CSV", events_path(:format => 'csv'))

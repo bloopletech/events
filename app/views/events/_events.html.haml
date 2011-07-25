@@ -1,0 +1,19 @@
+%table
+  %tr
+    %th Started
+    %th Duration
+    %th Finished
+    %th Tags
+    %th
+
+  - @events.each do |event|
+    %tr
+      %td= nice_time event.started_at
+      %td= distance_of_time_in_words(event.started_at, event.finished_at)
+      %td= nice_time event.finished_at
+      %td= event.tag_list
+      %td
+        = link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete, :remote => true
+
+- if Event.count > 10
+  %p There are more events, export to see them. 

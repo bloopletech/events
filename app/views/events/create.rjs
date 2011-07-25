@@ -1,0 +1,2 @@
+page.replace_html 'new_event_wrapper', :partial => 'new'
+page.replace_html 'events_list_wrapper', :partial => 'events'

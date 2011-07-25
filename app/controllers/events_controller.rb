@@ -19,7 +19,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(params[:event].merge(:finished_at => Time.zone.now))
+    @event = Event.new(params[:event])
     
     if @event.save
       @events = Event.limit(10)

@@ -46,3 +46,4 @@ end
 ::Time::DATE_FORMATS[:time] = "%I:%M%p"
 ::Time::DATE_FORMATS[:csv] = "%Y-%m-%d %I:%M:%S%p"
 
+ActsAsTaggableOn::TagList.delimiter = ' '

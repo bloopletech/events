@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rails server -e production -p 30812 -d
